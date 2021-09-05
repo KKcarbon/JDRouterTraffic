@@ -6,7 +6,7 @@ import time
 uploadcount=0
 downloadcount=0
 loginUrl = 'http://192.168.68.1/api/login'
-loginData = {'password':'XNTX2oy+a5MyHdeQadScsA=='} # 登陆后观察获得
+loginData = {'password':'XXXXXXXXXX'} # XXXXXXXXXX在登录时发送的包里获得
 Headers = {
     'Accept':'application/json, text/plain, */*',
     }
@@ -55,4 +55,4 @@ while(1):
     downloadcount+=downloadspeed
     print(f"{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}    总传输量")
     print(f"upload={uploadspeed/8:.2f}KB/S      {uploadcount/8192:.2f}MB\ndownload={downloadspeed/8:.2f}KB/S      {downloadcount/8192:.2f}MB\n")
-    time.sleep(2.1)#2.1ms是因为路由器会在此基础随机延迟发送数据包
+    time.sleep(2.1)#2.1ms是因为路由器随机延迟发送数据包
